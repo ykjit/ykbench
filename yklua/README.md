@@ -20,4 +20,4 @@ $ /path/to/yklua/src/lua ./binary-trees.lua
 
 ## License
 
-[Revised BSD license](./LICENSE) applies to all the files located in yklua directory.
+[Revised BSD license](./LICENSE) applies to all the files located in this directory.
