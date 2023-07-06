@@ -13,7 +13,7 @@
 ## Running 
 
 ```shell
-$ YKD_SERIALISE_COMPILATION=1 /path/to/yklua/src/lua ./fannkuchredux.lua 3
-$ YKD_SERIALISE_COMPILATION=1 /path/to/yklua/src/lua ./fasta.lua 10
-$ YKD_SERIALISE_COMPILATION=1 /path/to/yklua/src/lua ./binary-trees.lua 
+$ /path/to/yklua/src/lua ./fannkuchredux.lua 3
+$ /path/to/yklua/src/lua ./fasta.lua 10
+$ /path/to/yklua/src/lua ./binary-trees.lua 
 ```
