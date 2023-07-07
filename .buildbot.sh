@@ -3,7 +3,7 @@
 set -eu
 
 rm -fr ./build && mkdir ./build 
-pushd build
+cd build
 
 export CARGO_HOME="${PWD}/.cargo"
 export RUSTUP_HOME="${PWD}/.rustup"
@@ -16,9 +16,9 @@ export PATH="${PWD}/.cargo/bin/:$PATH"
 # yk bulid
 git clone git@github.com:ykjit/yk.git 
 git submodule update --init --recursive
-pushd yk
+cd yk
 cargo build
-popd
+cd ..
 
 # yklua bulid
 git clone git@github.com:ykjit/yklua.git
@@ -26,11 +26,11 @@ git clone git@github.com:ykjit/yklua.git
 export PATH=${PWD}/yk/bin:${PATH}
 export YK_BUILD_TYPE=debug
 
-pushd yklua
+cd yklua
 make
-popd
+cd ..
 
-popd # move to root
+cd .. # move to project root directory
 
 # yklua benchmark prob
 ./build/yklua/src/lua ./yklua/fasta.lua 
