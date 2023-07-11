@@ -14,28 +14,26 @@ sh rustup.sh --default-host x86_64-unknown-linux-gnu --default-toolchain stable 
 export PATH="${PWD}/.cargo/bin/:$PATH"
 
 # yk bulid
-git clone git@github.com:ykjit/yk.git 
+git clone --depth=1 https://github.com/ykjit/yk
 git submodule update --init --recursive
 cd yk
 cargo build
 cd ..
 
 # yklua bulid
-# git clone git@github.com:ykjit/yklua.git
+git clone --depth=1 https://github.com/ykjit/yklua
 
-# export PATH=${PWD}/yk/bin:${PATH}
-# export YK_BUILD_TYPE=debug
+export PATH=${PWD}/yk/bin:${PATH}
+export YK_BUILD_TYPE=debug
 
-# cd yklua
-# make
-# cd ..
+cd yklua
+make
+cd ..
 
-# cd .. # move to project root directory
+cd .. # move to project root directory
 
 # yklua benchmark prob
-# ./build/yklua/src/lua ./yklua/fasta.lua 
-# ./build/yklua/src/lua ./yklua/fannkuchredux.lua 3
-# ./build/yklua/src/lua ./yklua/fasta.lua 10
-# ./build/yklua/src/lua ./yklua/binary-trees.lua
-
-echo "hello from ${0}"
+./build/yklua/src/lua ./yklua/fasta.lua 
+./build/yklua/src/lua ./yklua/fannkuchredux.lua 3
+./build/yklua/src/lua ./yklua/fasta.lua 10
+./build/yklua/src/lua ./yklua/binary-trees.lua
