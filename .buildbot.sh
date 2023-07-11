@@ -10,8 +10,14 @@ export RUSTUP_HOME="${PWD}/.rustup"
 
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs > rustup.sh
-sh rustup.sh --default-host x86_64-unknown-linux-gnu --default-toolchain stable -y --no-modify-path
-export PATH="${PWD}/.cargo/bin/:$PATH"
+sh rustup.sh --default-host x86_64-unknown-linux-gnu \
+    --default-toolchain nightly \
+    --no-modify-path \
+    --profile minimal \
+    -y
+export PATH=${CARGO_HOME}/bin/:$PATH
+
+rustup toolchain install nightly --allow-downgrade
 
 # yk bulid
 git clone --depth=1 https://github.com/ykjit/yk
