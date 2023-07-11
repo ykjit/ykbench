@@ -21,8 +21,8 @@ rustup toolchain install nightly --allow-downgrade
 
 # yk bulid
 git clone --depth=1 https://github.com/ykjit/yk
-git submodule update --init --recursive
 cd yk
+git submodule update --init --recursive
 cargo build
 cd ..
 
