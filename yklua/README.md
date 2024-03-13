@@ -4,18 +4,21 @@
 
 ## Benchmarks:
 
-- [fannkuchredux](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/fannkuchredux-lua-1.html)
+- [fannkuchredux](./fannkuchredux.lua)
 
-- [fasta](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/fasta-lua-2.html)
+- [fasta](./fasta.lua)
 
-- [binary-trees](https://benchmarksgame-team.pages.debian.net/benchmarksgame/program/binarytrees-lua-2.html)
+- [binary-trees](./binary-trees.lua)
 
-## Running 
+- [quicksort](./quicksort.lua)
+
+## Running
 
 ```shell
 $ /path/to/yklua/src/lua ./fannkuchredux.lua 3
 $ /path/to/yklua/src/lua ./fasta.lua 10
-$ /path/to/yklua/src/lua ./binary-trees.lua 
+$ /path/to/yklua/src/lua ./binary-trees.lua
+$ /path/to/yklua/src/lua ./quicksort.lua
 ```
 
 ## License
